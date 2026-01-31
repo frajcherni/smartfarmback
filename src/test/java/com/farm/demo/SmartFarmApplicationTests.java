@@ -6,10 +6,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.farm.prj.SmartFarmApplication;
 
-// ✅ Add the main application class explicitly
-
-@SpringBootTest
-@ActiveProfiles("test")  // Make sure this is present
+@SpringBootTest(classes = SmartFarmApplication.class)  // ✅ ADD THIS
+@ActiveProfiles("test")
 class SmartFarmApplicationTests {
     
     @Test
